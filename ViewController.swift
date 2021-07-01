@@ -47,6 +47,8 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         let addButton: UIBarButtonItem = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(addAction))
         navigationItem.setRightBarButton(addButton, animated: false)
         
+        let editButton: UIBarButtonItem = UIBarButtonItem(title: "Edit", style: .plain, target: self, action: #selector(editAction))
+        navigationItem.setLeftBarButton(editButton, animated: false)
     }
     
     
@@ -78,6 +80,10 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         alert.addTextField(configurationHandler: nil)
         present(alert, animated: true, completion: nil)
         
+    }
+    
+    @objc func editAction() {
+        tableView.setEditing(true, animated: true)
     }
     
     // MARK: - UITableView Datasource & Delegate
