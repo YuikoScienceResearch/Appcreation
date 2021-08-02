@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import GoogleMaps
 
 class BLPushtheStackViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
@@ -89,17 +90,16 @@ class BLPushtheStackViewController: UIViewController, UITableViewDelegate, UITab
     //MARK: - Button Actions
     
     @objc func addAction() {
-        let alert = UIAlertController(title: "Add a group", message: nil, preferredStyle: .alert)
-        alert.addAction(UIAlertAction(title: "Submit", style: .default, handler: { action in
-            let string = alert.textFields![0].text! as String
-            if string.count == 0 {
-                return
-            }
-            self.groupsArray.append(string)
-            self.tableView.reloadData()
-        }))
-        alert.addTextField(configurationHandler: nil)
-        present(alert, animated: true, completion: nil)
+        GMSServices.provideAPIKey("AIzaSyBmVrQAyaovzItknfgimlR4ukqogO3W-uU")
+        let camera = GMSCameraPosition.camera(withLatitude: -33.86, longitude: 151.20, zoom: 6.0)
+             let mapView = GMSMapView.map(withFrame: self.view.frame, camera: camera)
+             view.addSubview(mapView)
+
+             let marker = GMSMarker()
+             marker.position = CLLocationCoordinate2D(latitude: -33.86, longitude: 151.20)
+             marker.title = "Sydney"
+             marker.snippet = "Australia"
+             marker.map = mapView
     }
 
     // MARK: - UITableView Datasource & Delegate
