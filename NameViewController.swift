@@ -102,8 +102,8 @@ class NameViewController: UIViewController, UITableViewDelegate, UITableViewData
 
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
-        let items = groupsArray[indexPath.row]
-        let vc = PushtheStackViewController (selectedItem: items, relatedItems: [items])
+        let _ = groupsArray[indexPath.row]
+        let vc = BucketListViewController()
         navigationController?.pushViewController (vc, animated: true)
     }
     

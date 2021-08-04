@@ -17,31 +17,12 @@
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
-                        <segue destination="5hJ-ch-LLT" kind="relationship" relationship="rootViewController" id="FL1-rK-Ezp"/>
+                        <segue destination="dJJ-Au-FIK" kind="relationship" relationship="rootViewController" id="P0p-xb-Xk9"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4Je-B9-CQd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-1489" y="-8"/>
-        </scene>
-        <!--Home Screen View Controller-->
-        <scene sceneID="Hyy-hf-Ovj">
-            <objects>
-                <viewController id="5hJ-ch-LLT" customClass="HomeScreenViewController" customModule="ScienceResearchApp" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="Jkw-oz-Rg8">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <viewLayoutGuide key="safeArea" id="H7p-MS-KFm"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                    </view>
-                    <navigationItem key="navigationItem" id="zxq-QL-tzY"/>
-                    <connections>
-                        <segue destination="dJJ-Au-FIK" kind="show" id="PbU-XW-Kav"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="jtq-jI-sRg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-780" y="-8"/>
         </scene>
         <!--Name View Controller-->
         <scene sceneID="79b-Ju-u0x">
@@ -54,32 +35,10 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <navigationItem key="navigationItem" id="Vaa-ai-dV2"/>
-                    <connections>
-                        <segue destination="Cbe-zb-N5s" kind="show" id="3d2-gH-mwF"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xMU-Zj-DiX" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-33" y="-8"/>
-        </scene>
-        <!--Pushthe Stack View Controller-->
-        <scene sceneID="RI3-Lq-jfh">
-            <objects>
-                <viewController id="Cbe-zb-N5s" customClass="PushtheStackViewController" customModule="ScienceResearchApp" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="aBg-2v-m9l">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <viewLayoutGuide key="safeArea" id="osT-u9-YQy"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                    </view>
-                    <navigationItem key="navigationItem" id="n8J-i3-vJw"/>
-                    <connections>
-                        <outlet property="backButton" destination="n8J-i3-vJw" id="ERA-Dc-oPo"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="QTU-sa-orL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="833" y="-8"/>
         </scene>
     </scenes>
     <resources>

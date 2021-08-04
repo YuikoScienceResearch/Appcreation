@@ -8,7 +8,7 @@
 import UIKit
 import GoogleMaps
 
-class BLPushtheStackViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class BLPushtheStackViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, CLLocationManagerDelegate {
     
     // MARK: - Data Properties
     
@@ -90,16 +90,8 @@ class BLPushtheStackViewController: UIViewController, UITableViewDelegate, UITab
     //MARK: - Button Actions
     
     @objc func addAction() {
-        GMSServices.provideAPIKey("AIzaSyBmVrQAyaovzItknfgimlR4ukqogO3W-uU")
-        let camera = GMSCameraPosition.camera(withLatitude: -33.86, longitude: 151.20, zoom: 6.0)
-             let mapView = GMSMapView.map(withFrame: self.view.frame, camera: camera)
-             view.addSubview(mapView)
-
-             let marker = GMSMarker()
-             marker.position = CLLocationCoordinate2D(latitude: -33.86, longitude: 151.20)
-             marker.title = "Sydney"
-             marker.snippet = "Australia"
-             marker.map = mapView
+        let vc = GoogleMapViewController()
+        present(vc, animated: true)
     }
 
     // MARK: - UITableView Datasource & Delegate
