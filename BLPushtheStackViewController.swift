@@ -6,9 +6,8 @@
 //
 
 import UIKit
-import GoogleMaps
 
-class BLPushtheStackViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, CLLocationManagerDelegate {
+class BLPushtheStackViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     // MARK: - Data Properties
     
@@ -90,7 +89,7 @@ class BLPushtheStackViewController: UIViewController, UITableViewDelegate, UITab
     //MARK: - Button Actions
     
     @objc func addAction() {
-        let vc = GoogleMapViewController()
+        let vc = WebAppViewController()
         present(vc, animated: true)
     }
 

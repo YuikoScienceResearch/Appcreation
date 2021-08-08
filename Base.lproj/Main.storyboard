@@ -24,6 +24,77 @@
             </objects>
             <point key="canvasLocation" x="-1489" y="-8"/>
         </scene>
+        <!--Web App View Controller-->
+        <scene sceneID="OOG-Cw-Fpv">
+            <objects>
+                <viewController id="azV-EM-YoE" customClass="WebAppViewController" customModule="ScienceResearchApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="qKB-U3-s82">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <wkWebView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Zlw-ih-BbZ">
+                                <rect key="frame" x="0.0" y="67" width="414" height="692"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <wkWebViewConfiguration key="configuration">
+                                    <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
+                                    <wkPreferences key="preferences"/>
+                                </wkWebViewConfiguration>
+                            </wkWebView>
+                            <searchBar contentMode="redraw" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="O3t-uy-LMs">
+                                <rect key="frame" x="0.0" y="16" width="414" height="51"/>
+                                <color key="barTintColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </searchBar>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="tEE-IV-O2Q">
+                                <rect key="frame" x="189" y="395" width="37" height="37"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="37" id="Bkd-b5-2Ca"/>
+                                </constraints>
+                                <color key="color" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </activityIndicatorView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="wmQ-8C-LLc"/>
+                        <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="wmQ-8C-LLc" firstAttribute="trailing" secondItem="tEE-IV-O2Q" secondAttribute="trailing" constant="188" id="9rP-vH-mHp"/>
+                            <constraint firstItem="tEE-IV-O2Q" firstAttribute="leading" secondItem="wmQ-8C-LLc" secondAttribute="leading" constant="189" id="Bg1-SN-ern"/>
+                            <constraint firstItem="wmQ-8C-LLc" firstAttribute="bottom" secondItem="tEE-IV-O2Q" secondAttribute="bottom" constant="327" id="QX8-Ty-TQ1"/>
+                            <constraint firstItem="tEE-IV-O2Q" firstAttribute="top" secondItem="O3t-uy-LMs" secondAttribute="bottom" constant="328" id="w6A-bu-706"/>
+                        </constraints>
+                    </view>
+                    <toolbarItems>
+                        <barButtonItem systemItem="rewind" id="pA2-hl-G4c">
+                            <connections>
+                                <action selector="back:" destination="azV-EM-YoE" id="vaa-Jb-jDE"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem systemItem="fastForward" id="1bz-ac-SJK">
+                            <connections>
+                                <action selector="forward:" destination="azV-EM-YoE" id="PYB-Zw-7Yx"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem style="plain" systemItem="flexibleSpace" id="hw2-U5-Jzd"/>
+                        <barButtonItem systemItem="refresh" id="yKJ-n3-kMy">
+                            <connections>
+                                <action selector="refresh:" destination="azV-EM-YoE" id="Lrg-zk-ZRY"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem systemItem="stop" id="S8r-7M-rcd">
+                            <connections>
+                                <action selector="stop:" destination="azV-EM-YoE" id="EUa-oW-hjC"/>
+                            </connections>
+                        </barButtonItem>
+                    </toolbarItems>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="ActInd" destination="tEE-IV-O2Q" id="TUd-bv-NAT"/>
+                        <outlet property="webView" destination="Zlw-ih-BbZ" id="Bsm-UD-Nfr"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="WIN-Li-FEX" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2360.8695652173915" y="-8.0357142857142847"/>
+        </scene>
         <!--Name View Controller-->
         <scene sceneID="79b-Ju-u0x">
             <objects>
@@ -35,10 +106,67 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <navigationItem key="navigationItem" id="Vaa-ai-dV2"/>
+                    <connections>
+                        <segue destination="5N1-Ce-sbM" kind="show" id="ky9-jQ-cgk"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xMU-Zj-DiX" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-33" y="-8"/>
+        </scene>
+        <!--Bucket List View Controller-->
+        <scene sceneID="w6g-7Q-9c6">
+            <objects>
+                <viewController id="ocx-kI-QC9" customClass="BucketListViewController" customModule="ScienceResearchApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="cfk-yj-STC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="tYX-Lm-IOD"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="es6-63-Y0H"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xmh-Ze-bR8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="762" y="-8"/>
+        </scene>
+        <!--Pushthe Stack View Controller-->
+        <scene sceneID="fVg-AN-xMH">
+            <objects>
+                <viewController id="c53-us-I2X" customClass="BLPushtheStackViewController" customModule="ScienceResearchApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Ggz-sZ-GOo">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="rTs-py-RTA"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="SxK-ck-Dka"/>
+                    <connections>
+                        <segue destination="azV-EM-YoE" kind="presentation" id="rCk-yR-WIZ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="CT4-1R-jIe" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1483" y="-8"/>
+        </scene>
+        <!--Bucket List View Controller-->
+        <scene sceneID="baN-pl-DoT">
+            <objects>
+                <viewController id="5N1-Ce-sbM" customClass="BucketListViewController" customModule="ScienceResearchApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ivd-Cy-oHN">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="PVX-ig-lsl"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="pnV-c6-H2u"/>
+                    <connections>
+                        <segue destination="c53-us-I2X" kind="show" id="bGS-8d-RaZ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qu1-TG-HOH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="762" y="-8"/>
         </scene>
     </scenes>
     <resources>

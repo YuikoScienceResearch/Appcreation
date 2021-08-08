@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		7F2092B799C1B036E94B4B91 /* Pods_ScienceResearchApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9D0FFF215A772F841B90E618 /* Pods_ScienceResearchApp.framework */; };
 		C3361DF7268E5A570058B829 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3361DF6268E5A570058B829 /* AppDelegate.swift */; };
 		C3361DF9268E5A570058B829 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3361DF8268E5A570058B829 /* SceneDelegate.swift */; };
 		C3361DFB268E5A570058B829 /* NameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3361DFA268E5A570058B829 /* NameViewController.swift */; };
@@ -15,24 +14,12 @@
 		C3361E00268E5A5A0058B829 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C3361DFF268E5A5A0058B829 /* Assets.xcassets */; };
 		C3361E03268E5A5A0058B829 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C3361E01268E5A5A0058B829 /* LaunchScreen.storyboard */; };
 		C3361E1A269BEB7D0058B829 /* BucketListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3361E19269BEB7D0058B829 /* BucketListViewController.swift */; };
+		C36FACF326BB896B001AD14B /* WebAppViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C36FACF226BB896B001AD14B /* WebAppViewController.swift */; };
+		C36FACF526BB8A11001AD14B /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C36FACF426BB8A11001AD14B /* WebKit.framework */; };
 		C387B1C826A71753001B324A /* BLPushtheStackViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C387B1C726A71753001B324A /* BLPushtheStackViewController.swift */; };
-		C3D0E49426BA317E00E61FE6 /* GoogleMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3D0E49326BA317E00E61FE6 /* GoogleMapViewController.swift */; };
 /* End PBXBuildFile section */
 
-/* Begin PBXContainerItemProxy section */
-		C387B1EA26B84CD0001B324A /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = C387B1E526B84CD0001B324A /* Pods.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 8D7B3526090919A8C7A3B804577AD58F;
-			remoteInfo = "Pods-ScienceResearchApp";
-		};
-/* End PBXContainerItemProxy section */
-
 /* Begin PBXFileReference section */
-		313DB80A44EB790BF9662924 /* Pods-ScienceResearchApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ScienceResearchApp.debug.xcconfig"; path = "Target Support Files/Pods-ScienceResearchApp/Pods-ScienceResearchApp.debug.xcconfig"; sourceTree = "<group>"; };
-		44691BB8886171816203ECDA /* Pods-ScienceResearchApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ScienceResearchApp.release.xcconfig"; path = "Target Support Files/Pods-ScienceResearchApp/Pods-ScienceResearchApp.release.xcconfig"; sourceTree = "<group>"; };
-		9D0FFF215A772F841B90E618 /* Pods_ScienceResearchApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ScienceResearchApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C3361DF3268E5A570058B829 /* ScienceResearchApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ScienceResearchApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C3361DF6268E5A570058B829 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C3361DF8268E5A570058B829 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -42,9 +29,9 @@
 		C3361E02268E5A5A0058B829 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C3361E04268E5A5A0058B829 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Info.plist; path = /Users/yuikosuzuki/Documents/ScienceResearchApp/Info.plist; sourceTree = "<absolute>"; };
 		C3361E19269BEB7D0058B829 /* BucketListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BucketListViewController.swift; sourceTree = "<group>"; };
+		C36FACF226BB896B001AD14B /* WebAppViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebAppViewController.swift; sourceTree = "<group>"; };
+		C36FACF426BB8A11001AD14B /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
 		C387B1C726A71753001B324A /* BLPushtheStackViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BLPushtheStackViewController.swift; sourceTree = "<group>"; };
-		C387B1E526B84CD0001B324A /* Pods.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Pods.xcodeproj; path = Pods/Pods.xcodeproj; sourceTree = "<group>"; };
-		C3D0E49326BA317E00E61FE6 /* GoogleMapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoogleMapViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,26 +39,17 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7F2092B799C1B036E94B4B91 /* Pods_ScienceResearchApp.framework in Frameworks */,
+				C36FACF526BB8A11001AD14B /* WebKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		1114A1E04196F953EEEEE1DF /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				313DB80A44EB790BF9662924 /* Pods-ScienceResearchApp.debug.xcconfig */,
-				44691BB8886171816203ECDA /* Pods-ScienceResearchApp.release.xcconfig */,
-			);
-			path = Pods;
-			sourceTree = "<group>";
-		};
 		9E536B31FCED962C386F7C31 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				9D0FFF215A772F841B90E618 /* Pods_ScienceResearchApp.framework */,
+				C36FACF426BB8A11001AD14B /* WebKit.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -80,9 +58,7 @@
 			isa = PBXGroup;
 			children = (
 				C3361DF5268E5A570058B829 /* ScienceResearchApp */,
-				C387B1E526B84CD0001B324A /* Pods.xcodeproj */,
 				C3361DF4268E5A570058B829 /* Products */,
-				1114A1E04196F953EEEEE1DF /* Pods */,
 				9E536B31FCED962C386F7C31 /* Frameworks */,
 			);
 			sourceTree = "<group>";
@@ -107,17 +83,9 @@
 				C3361DFA268E5A570058B829 /* NameViewController.swift */,
 				C3361E19269BEB7D0058B829 /* BucketListViewController.swift */,
 				C387B1C726A71753001B324A /* BLPushtheStackViewController.swift */,
-				C3D0E49326BA317E00E61FE6 /* GoogleMapViewController.swift */,
+				C36FACF226BB896B001AD14B /* WebAppViewController.swift */,
 			);
 			name = ScienceResearchApp;
-			sourceTree = "<group>";
-		};
-		C387B1E626B84CD0001B324A /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				C387B1EB26B84CD0001B324A /* Pods_ScienceResearchApp.framework */,
-			);
-			name = Products;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -127,11 +95,9 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = C3361E07268E5A5A0058B829 /* Build configuration list for PBXNativeTarget "ScienceResearchApp" */;
 			buildPhases = (
-				8F9A0D02ADD4BB346FB34107 /* [CP] Check Pods Manifest.lock */,
 				C3361DEF268E5A570058B829 /* Sources */,
 				C3361DF0268E5A570058B829 /* Frameworks */,
 				C3361DF1268E5A570058B829 /* Resources */,
-				1CCB33DAD398FF274C1BC446 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -167,28 +133,12 @@
 			mainGroup = C3361DEA268E5A570058B829;
 			productRefGroup = C3361DF4268E5A570058B829 /* Products */;
 			projectDirPath = "";
-			projectReferences = (
-				{
-					ProductGroup = C387B1E626B84CD0001B324A /* Products */;
-					ProjectRef = C387B1E526B84CD0001B324A /* Pods.xcodeproj */;
-				},
-			);
 			projectRoot = "";
 			targets = (
 				C3361DF2268E5A570058B829 /* ScienceResearchApp */,
 			);
 		};
 /* End PBXProject section */
-
-/* Begin PBXReferenceProxy section */
-		C387B1EB26B84CD0001B324A /* Pods_ScienceResearchApp.framework */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.framework;
-			path = Pods_ScienceResearchApp.framework;
-			remoteRef = C387B1EA26B84CD0001B324A /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		C3361DF1268E5A570058B829 /* Resources */ = {
@@ -203,56 +153,14 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
-/* Begin PBXShellScriptBuildPhase section */
-		1CCB33DAD398FF274C1BC446 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-ScienceResearchApp/Pods-ScienceResearchApp-resources-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Copy Pods Resources";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-ScienceResearchApp/Pods-ScienceResearchApp-resources-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-ScienceResearchApp/Pods-ScienceResearchApp-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		8F9A0D02ADD4BB346FB34107 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-ScienceResearchApp-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-/* End PBXShellScriptBuildPhase section */
-
 /* Begin PBXSourcesBuildPhase section */
 		C3361DEF268E5A570058B829 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C36FACF326BB896B001AD14B /* WebAppViewController.swift in Sources */,
 				C3361DFB268E5A570058B829 /* NameViewController.swift in Sources */,
 				C387B1C826A71753001B324A /* BLPushtheStackViewController.swift in Sources */,
-				C3D0E49426BA317E00E61FE6 /* GoogleMapViewController.swift in Sources */,
 				C3361DF7268E5A570058B829 /* AppDelegate.swift in Sources */,
 				C3361E1A269BEB7D0058B829 /* BucketListViewController.swift in Sources */,
 				C3361DF9268E5A570058B829 /* SceneDelegate.swift in Sources */,
@@ -399,7 +307,6 @@
 		};
 		C3361E08268E5A5A0058B829 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 313DB80A44EB790BF9662924 /* Pods-ScienceResearchApp.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -418,7 +325,6 @@
 		};
 		C3361E09268E5A5A0058B829 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 44691BB8886171816203ECDA /* Pods-ScienceResearchApp.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
