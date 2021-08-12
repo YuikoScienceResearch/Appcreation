@@ -10,36 +10,32 @@ import WebKit
 
 class WebAppViewController: UIViewController, WKNavigationDelegate, WKUIDelegate {
     
-    @IBOutlet weak var webView: WKWebView!
-    @IBOutlet weak var ActInd: UIActivityIndicatorView!
+    var webView: WKWebView!
+    var ActInd: UIActivityIndicatorView!
     
-        
     override func loadView() {
-        super.loadView()
-        webView = WKWebView()
-        webView.navigationDelegate = self
+        let webConfiguration = WKWebViewConfiguration()
+        webView = WKWebView(frame: .zero, configuration: webConfiguration)
+        webView.uiDelegate = self
         view = webView
-    }
-    
-    func loadPage() {
-        var url: URL!
-        url = URL(string: "http://www.google.com")
-        let request = URLRequest(url: url!)
-        
-        webView.load(request)
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.webView.addSubview(ActInd)
-        self.ActInd.startAnimating()
-        self.ActInd.hidesWhenStopped = true
-        
-        loadPage()
+        var url: URL!
+        url = URL(string: "http://www.google.com")
+        let request = URLRequest(url: url!)
+        webView.load(request)
     }
     
-    @IBAction func back(_ sender: Any) {
+        func generateActivityIndicator() {
+            webView.addSubview(ActInd)
+            self.ActInd.startAnimating()
+            self.ActInd.hidesWhenStopped = true
+    }
+    
+    func back(_ sender: Any) {
         
         if webView.canGoBack {
             
@@ -47,7 +43,7 @@ class WebAppViewController: UIViewController, WKNavigationDelegate, WKUIDelegate
         }
     }
     
-    @IBAction func forward(_ sender: Any) {
+    func forward(_ sender: Any) {
         
         if webView.canGoForward {
             
@@ -56,13 +52,13 @@ class WebAppViewController: UIViewController, WKNavigationDelegate, WKUIDelegate
         }
     }
     
-    @IBAction func refresh(_ sender: Any) {
+    func refresh(_ sender: Any) {
         
         webView.reload()
         
     }
     
-    @IBAction func stop(_ sender: Any) {
+    func stop(_ sender: Any) {
         
         webView.stopLoading()
         
@@ -86,3 +82,4 @@ class WebAppViewController: UIViewController, WKNavigationDelegate, WKUIDelegate
         
     }
 }
+
