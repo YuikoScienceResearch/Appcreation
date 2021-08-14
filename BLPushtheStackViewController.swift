@@ -89,7 +89,7 @@ class BLPushtheStackViewController: UIViewController, UITableViewDelegate, UITab
     //MARK: - Button Actions
     
     @objc func addAction() {
-        let vc = WebAppViewController()
+        let vc = SFSafariViewController()
         present(vc, animated: true)
     }
 

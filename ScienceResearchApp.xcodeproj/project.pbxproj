@@ -14,9 +14,9 @@
 		C3361E00268E5A5A0058B829 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C3361DFF268E5A5A0058B829 /* Assets.xcassets */; };
 		C3361E03268E5A5A0058B829 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C3361E01268E5A5A0058B829 /* LaunchScreen.storyboard */; };
 		C3361E1A269BEB7D0058B829 /* BucketListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3361E19269BEB7D0058B829 /* BucketListViewController.swift */; };
-		C36FACF326BB896B001AD14B /* WebAppViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C36FACF226BB896B001AD14B /* WebAppViewController.swift */; };
 		C36FACF526BB8A11001AD14B /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C36FACF426BB8A11001AD14B /* WebKit.framework */; };
 		C387B1C826A71753001B324A /* BLPushtheStackViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C387B1C726A71753001B324A /* BLPushtheStackViewController.swift */; };
+		C394376426C6D3B700C6BBD5 /* SFSafariViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C394376326C6D3B700C6BBD5 /* SFSafariViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,9 +29,9 @@
 		C3361E02268E5A5A0058B829 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C3361E04268E5A5A0058B829 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Info.plist; path = /Users/yuikosuzuki/Documents/ScienceResearchApp/Info.plist; sourceTree = "<absolute>"; };
 		C3361E19269BEB7D0058B829 /* BucketListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BucketListViewController.swift; sourceTree = "<group>"; };
-		C36FACF226BB896B001AD14B /* WebAppViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebAppViewController.swift; sourceTree = "<group>"; };
 		C36FACF426BB8A11001AD14B /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
 		C387B1C726A71753001B324A /* BLPushtheStackViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BLPushtheStackViewController.swift; sourceTree = "<group>"; };
+		C394376326C6D3B700C6BBD5 /* SFSafariViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SFSafariViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,7 +83,7 @@
 				C3361DFA268E5A570058B829 /* NameViewController.swift */,
 				C3361E19269BEB7D0058B829 /* BucketListViewController.swift */,
 				C387B1C726A71753001B324A /* BLPushtheStackViewController.swift */,
-				C36FACF226BB896B001AD14B /* WebAppViewController.swift */,
+				C394376326C6D3B700C6BBD5 /* SFSafariViewController.swift */,
 			);
 			name = ScienceResearchApp;
 			sourceTree = "<group>";
@@ -158,12 +158,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C36FACF326BB896B001AD14B /* WebAppViewController.swift in Sources */,
 				C3361DFB268E5A570058B829 /* NameViewController.swift in Sources */,
 				C387B1C826A71753001B324A /* BLPushtheStackViewController.swift in Sources */,
 				C3361DF7268E5A570058B829 /* AppDelegate.swift in Sources */,
 				C3361E1A269BEB7D0058B829 /* BucketListViewController.swift in Sources */,
 				C3361DF9268E5A570058B829 /* SceneDelegate.swift in Sources */,
+				C394376426C6D3B700C6BBD5 /* SFSafariViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
