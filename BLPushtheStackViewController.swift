@@ -6,8 +6,9 @@
 //
 
 import UIKit
+import SafariServices
 
-class BLPushtheStackViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class BLPushtheStackViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, SFSafariViewControllerDelegate {
     
     // MARK: - Data Properties
     
@@ -89,8 +90,17 @@ class BLPushtheStackViewController: UIViewController, UITableViewDelegate, UITab
     //MARK: - Button Actions
     
     @objc func addAction() {
-        let vc = SFSafariViewController()
-        present(vc, animated: true)
+        func showTutorial(_ which: Int) {
+            if let url = URL(string: "https://www.google.com") {
+                let config = SFSafariViewController.Configuration()
+                config.entersReaderIfAvailable = true
+            }
+        }
+        
+        func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+            showTutorial(indexPath.row)
+            
+        }
     }
 
     // MARK: - UITableView Datasource & Delegate
