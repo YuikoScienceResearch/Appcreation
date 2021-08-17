@@ -8,7 +8,7 @@
 import UIKit
 import SafariServices
 
-class BLPushtheStackViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, SFSafariViewControllerDelegate {
+class BLPushtheStackViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     // MARK: - Data Properties
     
@@ -90,20 +90,12 @@ class BLPushtheStackViewController: UIViewController, UITableViewDelegate, UITab
     //MARK: - Button Actions
     
     @objc func addAction() {
-        func showTutorial(_ which: Int) {
-            if let url = URL(string: "https://www.google.com") {
-                let config = SFSafariViewController.Configuration()
-                config.entersReaderIfAvailable = true
-            }
-        }
-        
-        func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-            showTutorial(indexPath.row)
-            
+        if let url = URL(string: "https://www.google.com") {
+            convenience init(url URL: URL)
         }
     }
 
-    // MARK: - UITableView Datasource & Delegate
+    // MARK: - UITablView Datasource & Delegate
    
     func numberOfSections(in tableView: UITableView) -> Int {
         return 1
