@@ -91,7 +91,8 @@ class BLPushtheStackViewController: UIViewController, UITableViewDelegate, UITab
     
     @objc func addAction() {
         if let url = URL(string: "https://www.google.com") {
-            convenience init(url URL: URL)
+            let webViewController: SFSafariViewController = SFSafariViewController(url: url)
+            present(webViewController, animated: true, completion: nil)
         }
     }
 
