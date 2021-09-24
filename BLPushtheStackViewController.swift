@@ -6,7 +6,6 @@
 //
 
 import UIKit
-import SafariServices
 
 class BLPushtheStackViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
@@ -90,10 +89,17 @@ class BLPushtheStackViewController: UIViewController, UITableViewDelegate, UITab
     //MARK: - Button Actions
     
     @objc func addAction() {
-        if let url = URL(string: "https://www.google.com") {
-            let webViewController: SFSafariViewController = SFSafariViewController(url: url)
-            present(webViewController, animated: true, completion: nil)
-        }
+        let alert = UIAlertController(title: "Add a group", message: nil, preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "Submit", style: .default, handler: { action in
+            let string = alert.textFields![0].text! as String
+            if string.count == 0 {
+                return
+            }
+            self.groupsArray.append(string)
+            self.tableView.reloadData()
+        }))
+        alert.addTextField(configurationHandler: nil)
+        present(alert, animated: true, completion: nil)
     }
 
     // MARK: - UITablView Datasource & Delegate
@@ -114,6 +120,9 @@ class BLPushtheStackViewController: UIViewController, UITableViewDelegate, UITab
 
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
+        let _ = groupsArray[indexPath.row]
+        let vc = UploadViewController()
+        navigationController?.pushViewController (vc, animated: true)
     }
     
     func tableView(_ tableView: UITableView, moveRowAt sourceIndexPath: IndexPath, to destinationIndexPath: IndexPath) {

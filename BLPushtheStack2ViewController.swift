@@ -1,14 +1,14 @@
 //
-//  BucketListViewController.swift
+//  BLPushtheStack2ViewController.swift
 //  ScienceResearchApp
 //
-//  Created by Yuiko Suzuki on 7/11/21.
+//  Created by Yuiko Suzuki on 9/12/21.
 //
 
 import UIKit
 
-class BucketListViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
-    
+class BLPushtheStack2ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+
     // MARK: - Data Properties
     
     struct Category {
@@ -17,6 +17,19 @@ class BucketListViewController: UIViewController, UITableViewDelegate, UITableVi
     }
     
     var groupsArray: Array<String> = []
+    
+    private let selectedItem: String
+    private let relatedItems: [String]
+    
+    init(selectedItem: String, relatedItems: [String]) {
+        self.selectedItem = selectedItem
+        self.relatedItems = relatedItems
+        super.init(nibName: nil, bundle: nil)
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
     
     // MARK: - UI Properties
     
@@ -33,23 +46,32 @@ class BucketListViewController: UIViewController, UITableViewDelegate, UITableVi
     
     override func viewDidLoad() {
         super.viewDidLoad()
-      
         view.backgroundColor = .systemBackground
+        title = selectedItem
+        
+        let label = UILabel(frame: view.bounds)
+        view.addSubview(label)
+        label.textAlignment = .center
+        label.numberOfLines = -1
+        for item in relatedItems {
+            label.text = (label.text ?? "") + " " + item
+        }
         
         // Generate UI
         generateNavigationUI()
         generateTableView()
         
-        groupsArray = ["Home", "Beach", "Cinema"]
+        groupsArray = ["Miami Beach"]
     }
     
     // MARK: - UI Generation
     
     func generateNavigationUI() {
-        title = "Bucket List"
+        title = selectedItem
         
         let addButton: UIBarButtonItem = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(addAction))
         navigationItem.setRightBarButton(addButton, animated: false)
+
     }
     
     
@@ -80,11 +102,9 @@ class BucketListViewController: UIViewController, UITableViewDelegate, UITableVi
         }))
         alert.addTextField(configurationHandler: nil)
         present(alert, animated: true, completion: nil)
-        
     }
 
-
-    // MARK: - UITableView Datasource & Delegate
+    // MARK: - UITablView Datasource & Delegate
    
     func numberOfSections(in tableView: UITableView) -> Int {
         return 1
@@ -102,9 +122,6 @@ class BucketListViewController: UIViewController, UITableViewDelegate, UITableVi
 
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
-        let items = groupsArray[indexPath.row]
-        let vc = BLPushtheStackViewController (selectedItem: items, relatedItems: [items])
-        navigationController?.pushViewController (vc, animated: true)
     }
     
     func tableView(_ tableView: UITableView, moveRowAt sourceIndexPath: IndexPath, to destinationIndexPath: IndexPath) {
