@@ -81,7 +81,7 @@
         <!--Upload View Controller-->
         <scene sceneID="oZN-Dd-ckr">
             <objects>
-                <viewController storyboardIdentifier="uploadViewControllerID" useStoryboardIdentifierAsRestorationIdentifier="YES" id="c5j-Fe-5V4" customClass="UploadViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="uploadViewControllerID" useStoryboardIdentifierAsRestorationIdentifier="YES" id="c5j-Fe-5V4" customClass="UploadViewController" customModule="ScienceResearchApp" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="jf9-dV-KwW">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -123,7 +123,7 @@
                                 <connections>
                                     <action selector="choosingImage:" destination="c5j-Fe-5V4" eventType="touchDown" id="NiI-GD-6Bk"/>
                                     <action selector="choosingimage:" destination="c5j-Fe-5V4" eventType="touchDown" id="dbr-e0-kM5"/>
-                                    <action selector="choosingimage:" destination="c5j-Fe-5V4" eventType="touchUpInside" id="m2u-xF-N84"/>
+                                    <action selector="choosingimage:" destination="c5j-Fe-5V4" eventType="touchUpInside" id="mKZ-U3-bcf"/>
                                     <action selector="upload:" destination="c5j-Fe-5V4" eventType="touchUpInside" id="VgN-5O-6XQ"/>
                                 </connections>
                             </button>
