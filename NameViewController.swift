@@ -41,7 +41,8 @@ class NameViewController: UIViewController, UITableViewDelegate, UITableViewData
         generateTableView()
         
         groupsArray = ["Family", "Friends"]
-    }
+
+        }
     
     // MARK: - UI Generation
     
@@ -77,6 +78,7 @@ class NameViewController: UIViewController, UITableViewDelegate, UITableViewData
                 return
             }
             self.groupsArray.append(string)
+            UserDefaults.standard.set(self.groupsArray, forKey: "groupNames")
             self.tableView.reloadData()
         }))
         alert.addTextField(configurationHandler: nil)

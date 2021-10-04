@@ -81,7 +81,7 @@
         <!--Upload View Controller-->
         <scene sceneID="oZN-Dd-ckr">
             <objects>
-                <viewController id="c5j-Fe-5V4" customClass="UploadViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="uploadViewControllerID" useStoryboardIdentifierAsRestorationIdentifier="YES" id="c5j-Fe-5V4" customClass="UploadViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="jf9-dV-KwW">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -98,8 +98,11 @@
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="If3-UL-600">
                                 <rect key="frame" x="41" y="752" width="49" height="51"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <accessibility key="accessibilityConfiguration" identifier="uploadViewControllerID"/>
                                 <state key="normal" title="Upload"/>
                                 <connections>
+                                    <action selector="update:" destination="c5j-Fe-5V4" eventType="touchDown" id="i5O-4V-xTE"/>
+                                    <action selector="updateimage:" destination="c5j-Fe-5V4" eventType="touchDown" id="tXe-Q0-yrs"/>
                                     <action selector="upload:" destination="c5j-Fe-5V4" eventType="touchUpInside" id="OSh-Lm-s07"/>
                                 </connections>
                             </button>
@@ -108,8 +111,20 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Choose Image"/>
                                 <connections>
-                                    <action selector="choosingimage:" destination="c5j-Fe-5V4" eventType="touchUpInside" id="vmK-a5-Cds"/>
+                                    <action selector="choosingImage:" destination="c5j-Fe-5V4" eventType="touchDown" id="I9l-T0-7et"/>
+                                    <action selector="choosingimage:" destination="c5j-Fe-5V4" eventType="touchUpInside" id="n8c-Lz-8dN"/>
                                     <action selector="upload:" destination="c5j-Fe-5V4" eventType="touchUpInside" id="GfV-to-Na7"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rhe-ya-9Kl">
+                                <rect key="frame" x="288" y="129" width="99" height="51"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Choose Image"/>
+                                <connections>
+                                    <action selector="choosingImage:" destination="c5j-Fe-5V4" eventType="touchDown" id="NiI-GD-6Bk"/>
+                                    <action selector="choosingimage:" destination="c5j-Fe-5V4" eventType="touchDown" id="dbr-e0-kM5"/>
+                                    <action selector="choosingimage:" destination="c5j-Fe-5V4" eventType="touchUpInside" id="m2u-xF-N84"/>
+                                    <action selector="upload:" destination="c5j-Fe-5V4" eventType="touchUpInside" id="VgN-5O-6XQ"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -118,7 +133,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="Emd-eE-TgP"/>
                     <connections>
-                        <outlet property="imageView" destination="dDx-R8-6W6" id="QxI-dF-SSE"/>
+                        <outlet property="imageView" destination="dDx-R8-6W6" id="R7f-NE-48E"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Pyx-Cj-uED" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

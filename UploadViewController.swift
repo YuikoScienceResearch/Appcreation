@@ -7,16 +7,18 @@
 
 import UIKit
 
-extension String {
-    static let keyForImage = "data"
-}
 
 class UploadViewController: UIViewController {
+    
     @IBOutlet weak var imageView: UIImageView!
-
+    
+    var groupName: String?
+    var bucketListName: String?
+    var bucketListItem: String?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        retriveData(key: .keyForImage)
+        retriveData(key: "\(groupName)_\(bucketListName)_\(bucketListItem)")
     }
     
     
@@ -24,14 +26,24 @@ class UploadViewController: UIViewController {
         let imagePicker = UIImagePickerController()
         imagePicker.delegate = self
         imagePicker.allowsEditing = true
-        imagePicker.sourceType = .camera
+        imagePicker.sourceType = .photoLibrary
         present(imagePicker, animated: true)
+    }
+    
+    @IBAction func updateimage(_ sender: Any) {
+        if imageView.image == nil {
+            return
+    }
+        
+        let activityViewController: UIActivityViewController = UIActivityViewController(activityItems: [imageView.image!], applicationActivities: nil)
+        present(activityViewController, animated: true, completion: nil)
     }
     
     func save(image: UIImage) {
         let imageData = image.pngData()! as NSData
         
-        UserDefaults.standard.set(imageData, forKey: .keyForImage)
+        UserDefaults.standard.set(imageData, forKey: "\(groupName)_\(bucketListName)_\(bucketListItem)")
+        
     }
     
     func retriveData(key: String) {
@@ -39,7 +51,6 @@ class UploadViewController: UIViewController {
         let image = UIImage(data: data as Data)
         imageView.image = image
     }
-    
 }
 
 extension UploadViewController : UIImagePickerControllerDelegate, UINavigationControllerDelegate {
@@ -56,4 +67,3 @@ extension UploadViewController : UIImagePickerControllerDelegate, UINavigationCo
         picker.dismiss(animated: true, completion: nil)
     }
 }
-

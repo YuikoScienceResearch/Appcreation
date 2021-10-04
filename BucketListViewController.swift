@@ -18,6 +18,8 @@ class BucketListViewController: UIViewController, UITableViewDelegate, UITableVi
     
     var groupsArray: Array<String> = []
     
+    var groupName: String?
+    
     // MARK: - UI Properties
     
     let tableView: UITableView = {
@@ -104,6 +106,8 @@ class BucketListViewController: UIViewController, UITableViewDelegate, UITableVi
         tableView.deselectRow(at: indexPath, animated: true)
         let items = groupsArray[indexPath.row]
         let vc = BLPushtheStackViewController (selectedItem: items, relatedItems: [items])
+        vc.groupName = groupName
+        vc.bucketListName = items
         navigationController?.pushViewController (vc, animated: true)
     }
     

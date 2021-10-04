@@ -21,6 +21,9 @@ class BLPushtheStackViewController: UIViewController, UITableViewDelegate, UITab
     private let selectedItem: String
     private let relatedItems: [String]
     
+    var groupName: String?
+    var bucketListName: String?
+    
     init(selectedItem: String, relatedItems: [String]) {
         self.selectedItem = selectedItem
         self.relatedItems = relatedItems
@@ -120,8 +123,13 @@ class BLPushtheStackViewController: UIViewController, UITableViewDelegate, UITab
 
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
-        let _ = groupsArray[indexPath.row]
-        let vc = UploadViewController()
+        let itemName = groupsArray[indexPath.row]
+        
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let vc: UploadViewController = storyboard.instantiateViewController(withIdentifier: "uploadViewControllerID") as! UploadViewController
+        vc.groupName = groupName
+        vc.bucketListName = bucketListName
+        vc.bucketListItem = itemName
         navigationController?.pushViewController (vc, animated: true)
     }
     
