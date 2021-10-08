@@ -23,15 +23,15 @@ class UploadViewController: UIViewController {
     
     
     @IBAction func choosingimage(_ sender: Any) {
-        let imagePicker = UIImagePickerController()
+    let imagePicker = UIImagePickerController()
         imagePicker.delegate = self
         imagePicker.allowsEditing = true
         imagePicker.sourceType = .photoLibrary
         present(imagePicker, animated: true)
     }
     
-    @IBAction func updateimage(_ sender: Any) {
-        if imageView.image == nil {
+    @IBAction func uploadimage(_ sender: Any) {
+    if imageView.image == nil {
             return
     }
         

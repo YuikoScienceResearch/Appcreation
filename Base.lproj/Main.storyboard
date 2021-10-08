@@ -101,9 +101,7 @@
                                 <accessibility key="accessibilityConfiguration" identifier="uploadViewControllerID"/>
                                 <state key="normal" title="Upload"/>
                                 <connections>
-                                    <action selector="update:" destination="c5j-Fe-5V4" eventType="touchDown" id="i5O-4V-xTE"/>
-                                    <action selector="updateimage:" destination="c5j-Fe-5V4" eventType="touchDown" id="tXe-Q0-yrs"/>
-                                    <action selector="upload:" destination="c5j-Fe-5V4" eventType="touchUpInside" id="OSh-Lm-s07"/>
+                                    <action selector="uploadimage:" destination="c5j-Fe-5V4" eventType="touchDown" id="rr0-ed-hmg"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CBQ-kd-xqW">
@@ -121,10 +119,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Choose Image"/>
                                 <connections>
-                                    <action selector="choosingImage:" destination="c5j-Fe-5V4" eventType="touchDown" id="NiI-GD-6Bk"/>
-                                    <action selector="choosingimage:" destination="c5j-Fe-5V4" eventType="touchDown" id="dbr-e0-kM5"/>
-                                    <action selector="choosingimage:" destination="c5j-Fe-5V4" eventType="touchUpInside" id="mKZ-U3-bcf"/>
-                                    <action selector="upload:" destination="c5j-Fe-5V4" eventType="touchUpInside" id="VgN-5O-6XQ"/>
+                                    <action selector="choosingimage:" destination="c5j-Fe-5V4" eventType="touchDown" id="pFS-tA-qUf"/>
                                 </connections>
                             </button>
                         </subviews>
