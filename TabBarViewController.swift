@@ -14,7 +14,7 @@ class TabBarViewController: UITabBarController {
         
         let vc1 = NameViewController()
         let vc2 = BucketListViewController()
-        let vc3 = BLPushtheStackViewController()
+        let vc3 = BLPushtheStackViewController(coder: <#NSCoder#>)
         let vc4 = UploadViewController()
         
         vc1.title = "Name"

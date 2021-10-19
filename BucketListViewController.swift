@@ -19,6 +19,7 @@ class BucketListViewController: UIViewController, UITableViewDelegate, UITableVi
     var groupsArray: Array<String> = []
     
     var groupName: String?
+    var individualName: String?
     
     // MARK: - UI Properties
     
@@ -107,6 +108,7 @@ class BucketListViewController: UIViewController, UITableViewDelegate, UITableVi
         let items = groupsArray[indexPath.row]
         let vc = BLPushtheStackViewController (selectedItem: items, relatedItems: [items])
         vc.groupName = groupName
+        vc.individualName = individualName
         vc.bucketListName = items
         navigationController?.pushViewController (vc, animated: true)
     }

@@ -13,12 +13,14 @@ class UploadViewController: UIViewController {
     @IBOutlet weak var imageView: UIImageView!
     
     var groupName: String?
+    var individualName: String?
     var bucketListName: String?
     var bucketListItem: String?
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        retriveData(key: "\(groupName)_\(bucketListName)_\(bucketListItem)")
+        view.backgroundColor = .systemBackground
+        retriveData(key: "\(groupName)_\(individualName)_\(bucketListName)_\(bucketListItem)")
     }
     
     
@@ -39,10 +41,16 @@ class UploadViewController: UIViewController {
         present(activityViewController, animated: true, completion: nil)
     }
     
+    @IBAction func shareImage(_ sender: Any) {
+        let items = [imageView.image]
+        let shareController = UIActivityViewController(activityItems: items, applicationActivities: nil)
+        present(shareController, animated: true, completion: nil)
+    }
+    
     func save(image: UIImage) {
         let imageData = image.pngData()! as NSData
         
-        UserDefaults.standard.set(imageData, forKey: "\(groupName)_\(bucketListName)_\(bucketListItem)")
+        UserDefaults.standard.set(imageData, forKey: "\(groupName)_\(individualName)_\(bucketListName)_\(bucketListItem)")
         
     }
     

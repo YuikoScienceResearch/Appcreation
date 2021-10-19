@@ -47,7 +47,7 @@ class NameViewController: UIViewController, UITableViewDelegate, UITableViewData
     // MARK: - UI Generation
     
     func generateNavigationUI() {
-        title = "Name"
+        title = "Group Name"
         
         let addButton: UIBarButtonItem = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(addAction))
         navigationItem.setRightBarButton(addButton, animated: false)
@@ -65,7 +65,6 @@ class NameViewController: UIViewController, UITableViewDelegate, UITableViewData
         view.addConstraint(NSLayoutConstraint(item: tableView, attribute: .right, relatedBy: .equal, toItem: view, attribute: .right, multiplier: 1.0, constant: 0.0))
         view.addConstraint(NSLayoutConstraint(item: tableView, attribute: .bottom, relatedBy: .equal, toItem: view, attribute: .bottom, multiplier: 1.0, constant: 0.0))
         view.addConstraint(NSLayoutConstraint(item: tableView, attribute: .top, relatedBy: .equal, toItem: view, attribute: .top, multiplier: 1.0, constant: 0.0))
-        
     }
     
     //MARK: - Button Actions
@@ -83,7 +82,12 @@ class NameViewController: UIViewController, UITableViewDelegate, UITableViewData
         }))
         alert.addTextField(configurationHandler: nil)
         present(alert, animated: true, completion: nil)
+    }
     
+    @objc func shareAction() {
+        let items = [URL(string: "https://www.bif.com")!]
+        let ac = UIActivityViewController(activityItems: items, applicationActivities: nil)
+        present(ac, animated: true)
     }
 
     // MARK: - UITableView Datasource & Delegate

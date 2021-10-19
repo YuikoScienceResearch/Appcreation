@@ -1,14 +1,14 @@
 //
-//  BLPushtheStackViewController.swift
+//  IndividuaNameViewController.swift
 //  ScienceResearchApp
 //
-//  Created by Yuiko Suzuki on 7/20/21.
+//  Created by Yuiko Suzuki on 10/17/21.
 //
 
 import UIKit
 
-class BLPushtheStackViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
-    
+class IndividuaNameViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+
     // MARK: - Data Properties
     
     struct Category {
@@ -18,22 +18,7 @@ class BLPushtheStackViewController: UIViewController, UITableViewDelegate, UITab
     
     var groupsArray: Array<String> = []
     
-    private let selectedItem: String
-    private let relatedItems: [String]
-    
     var groupName: String?
-    var individualName: String?
-    var bucketListName: String?
-    
-    init(selectedItem: String, relatedItems: [String]) {
-        self.selectedItem = selectedItem
-        self.relatedItems = relatedItems
-        super.init(nibName: nil, bundle: nil)
-    }
-    
-    required init?(coder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
-    }
     
     // MARK: - UI Properties
     
@@ -50,30 +35,23 @@ class BLPushtheStackViewController: UIViewController, UITableViewDelegate, UITab
     
     override func viewDidLoad() {
         super.viewDidLoad()
+      
         view.backgroundColor = .systemBackground
-        title = selectedItem
-        
-        let label = UILabel(frame: view.bounds)
-        view.addSubview(label)
-        label.textAlignment = .center
-        label.numberOfLines = -1
-        for item in relatedItems {
-            label.text = (label.text ?? "") + " " + item
-        }
         
         // Generate UI
         generateNavigationUI()
         generateTableView()
-    }
+
+        }
     
     // MARK: - UI Generation
     
     func generateNavigationUI() {
-        title = selectedItem
+        title = "Individual Name"
         
         let addButton: UIBarButtonItem = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(addAction))
         navigationItem.setRightBarButton(addButton, animated: false)
-
+        
     }
     
     
@@ -100,13 +78,15 @@ class BLPushtheStackViewController: UIViewController, UITableViewDelegate, UITab
                 return
             }
             self.groupsArray.append(string)
+            UserDefaults.standard.set(self.groupsArray, forKey: "individualName")
             self.tableView.reloadData()
         }))
         alert.addTextField(configurationHandler: nil)
         present(alert, animated: true, completion: nil)
+    
     }
 
-    // MARK: - UITablView Datasource & Delegate
+    // MARK: - UITableView Datasource & Delegate
    
     func numberOfSections(in tableView: UITableView) -> Int {
         return 1
@@ -124,14 +104,10 @@ class BLPushtheStackViewController: UIViewController, UITableViewDelegate, UITab
 
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
-        let itemName = groupsArray[indexPath.row]
-        
-        let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        let vc: UploadViewController = storyboard.instantiateViewController(withIdentifier: "uploadViewControllerID") as! UploadViewController
+        let items = groupsArray[indexPath.row]
+        let vc = BucketListViewController()
         vc.groupName = groupName
-        vc.individualName = individualName
-        vc.bucketListName = bucketListName
-        vc.bucketListItem = itemName
+        vc.individualName = items
         navigationController?.pushViewController (vc, animated: true)
     }
     
@@ -148,3 +124,4 @@ class BLPushtheStackViewController: UIViewController, UITableViewDelegate, UITab
         }
     }
 }
+
