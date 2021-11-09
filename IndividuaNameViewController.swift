@@ -1,5 +1,5 @@
 //
-//  IndividuaNameViewController.swift
+//  IndividualNameViewController.swift
 //  ScienceResearchApp
 //
 //  Created by Yuiko Suzuki on 10/17/21.
@@ -7,7 +7,7 @@
 
 import UIKit
 
-class IndividuaNameViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class IndividualNameViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
     // MARK: - Data Properties
     

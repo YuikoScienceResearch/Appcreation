@@ -1,14 +1,14 @@
 //
-//  BucketListViewController.swift
+//  IndividualNameViewController.swift
 //  ScienceResearchApp
 //
-//  Created by Yuiko Suzuki on 7/11/21.
+//  Created by Yuiko Suzuki on 10/17/21.
 //
 
 import UIKit
 
-class BucketListViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
-    
+class IndividualNameViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+
     // MARK: - Data Properties
     
     struct Category {
@@ -42,17 +42,17 @@ class BucketListViewController: UIViewController, UITableViewDelegate, UITableVi
         // Generate UI
         generateNavigationUI()
         generateTableView()
-        
-        groupsArray = ["Home", "Beach", "Cinema"]
-    }
+
+        }
     
     // MARK: - UI Generation
     
     func generateNavigationUI() {
-        title = "Wish List"
+        title = "Individual Name"
         
         let addButton: UIBarButtonItem = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(addAction))
         navigationItem.setRightBarButton(addButton, animated: false)
+        
     }
     
     
@@ -79,15 +79,16 @@ class BucketListViewController: UIViewController, UITableViewDelegate, UITableVi
                 return
             }
             self.groupsArray.append(string)
+            UserDefaults.standard.set(self.groupsArray, forKey: "individualName")
             self.tableView.reloadData()
         }))
         alert.addTextField(configurationHandler: nil)
         present(alert, animated: true, completion: nil)
-        
+    
     }
     
     func save(text: UITextView) {
-        UserDefaults.standard.set(text, forKey: "\(Name)_\(individualName)")
+        UserDefaults.standard.set(text, forKey: "\(Name)")
     }
 
     // MARK: - UITableView Datasource & Delegate
@@ -109,10 +110,9 @@ class BucketListViewController: UIViewController, UITableViewDelegate, UITableVi
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
         let items = groupsArray[indexPath.row]
-        let vc = BLPushtheStackViewController (selectedItem: items, relatedItems: [items])
+        let vc = BucketListViewController()
         vc.Name = Name
-        vc.individualName = individualName
-        vc.bucketListName = items
+        vc.individualName = items
         navigationController?.pushViewController (vc, animated: true)
     }
     
@@ -129,3 +129,4 @@ class BucketListViewController: UIViewController, UITableViewDelegate, UITableVi
         }
     }
 }
+

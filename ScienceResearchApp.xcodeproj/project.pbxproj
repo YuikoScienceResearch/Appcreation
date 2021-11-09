@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		C31E1A07271D12A0001FDABC /* IndividuaNameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C31E1A06271D12A0001FDABC /* IndividuaNameViewController.swift */; };
 		C3361DF7268E5A570058B829 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3361DF6268E5A570058B829 /* AppDelegate.swift */; };
 		C3361DF9268E5A570058B829 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3361DF8268E5A570058B829 /* SceneDelegate.swift */; };
 		C3361DFB268E5A570058B829 /* NameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3361DFA268E5A570058B829 /* NameViewController.swift */; };
@@ -17,11 +16,11 @@
 		C3361E1A269BEB7D0058B829 /* BucketListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3361E19269BEB7D0058B829 /* BucketListViewController.swift */; };
 		C36FACF526BB8A11001AD14B /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C36FACF426BB8A11001AD14B /* WebKit.framework */; };
 		C387B1C826A71753001B324A /* BLPushtheStackViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C387B1C726A71753001B324A /* BLPushtheStackViewController.swift */; };
+		C399435E272048D200A0C2F5 /* IndividualNameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C399435D272048D200A0C2F5 /* IndividualNameViewController.swift */; };
 		C3C32A3626EEEEDD00523D24 /* UploadViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3C32A3526EEEEDD00523D24 /* UploadViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		C31E1A06271D12A0001FDABC /* IndividuaNameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IndividuaNameViewController.swift; sourceTree = "<group>"; };
 		C3361DF3268E5A570058B829 /* ScienceResearchApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ScienceResearchApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C3361DF6268E5A570058B829 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C3361DF8268E5A570058B829 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -33,6 +32,7 @@
 		C3361E19269BEB7D0058B829 /* BucketListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BucketListViewController.swift; sourceTree = "<group>"; };
 		C36FACF426BB8A11001AD14B /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
 		C387B1C726A71753001B324A /* BLPushtheStackViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BLPushtheStackViewController.swift; sourceTree = "<group>"; };
+		C399435D272048D200A0C2F5 /* IndividualNameViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IndividualNameViewController.swift; sourceTree = "<group>"; };
 		C3C32A3526EEEEDD00523D24 /* UploadViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UploadViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -83,7 +83,7 @@
 				C3361E01268E5A5A0058B829 /* LaunchScreen.storyboard */,
 				C3361E04268E5A5A0058B829 /* Info.plist */,
 				C3361DFA268E5A570058B829 /* NameViewController.swift */,
-				C31E1A06271D12A0001FDABC /* IndividuaNameViewController.swift */,
+				C399435D272048D200A0C2F5 /* IndividualNameViewController.swift */,
 				C3361E19269BEB7D0058B829 /* BucketListViewController.swift */,
 				C387B1C726A71753001B324A /* BLPushtheStackViewController.swift */,
 				C3C32A3526EEEEDD00523D24 /* UploadViewController.swift */,
@@ -164,7 +164,7 @@
 				C3361DFB268E5A570058B829 /* NameViewController.swift in Sources */,
 				C3C32A3626EEEEDD00523D24 /* UploadViewController.swift in Sources */,
 				C387B1C826A71753001B324A /* BLPushtheStackViewController.swift in Sources */,
-				C31E1A07271D12A0001FDABC /* IndividuaNameViewController.swift in Sources */,
+				C399435E272048D200A0C2F5 /* IndividualNameViewController.swift in Sources */,
 				C3361DF7268E5A570058B829 /* AppDelegate.swift in Sources */,
 				C3361E1A269BEB7D0058B829 /* BucketListViewController.swift in Sources */,
 				C3361DF9268E5A570058B829 /* SceneDelegate.swift in Sources */,

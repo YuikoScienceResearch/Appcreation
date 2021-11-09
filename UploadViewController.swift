@@ -12,7 +12,7 @@ class UploadViewController: UIViewController {
     
     @IBOutlet weak var imageView: UIImageView!
     
-    var groupName: String?
+    var Name: String?
     var individualName: String?
     var bucketListName: String?
     var bucketListItem: String?
@@ -20,7 +20,9 @@ class UploadViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .systemBackground
-        retriveData(key: "\(groupName)_\(individualName)_\(bucketListName)_\(bucketListItem)")
+        title = "Bulletin Board"
+        
+        retriveData(key: "\(Name)_\(individualName)_\(bucketListName)_\(bucketListItem)")
     }
     
     
@@ -46,11 +48,12 @@ class UploadViewController: UIViewController {
         let shareController = UIActivityViewController(activityItems: items, applicationActivities: nil)
         present(shareController, animated: true, completion: nil)
     }
+
     
     func save(image: UIImage) {
         let imageData = image.pngData()! as NSData
         
-        UserDefaults.standard.set(imageData, forKey: "\(groupName)_\(individualName)_\(bucketListName)_\(bucketListItem)")
+        UserDefaults.standard.set(imageData, forKey: "\(Name)_\(individualName)_\(bucketListName)_\(bucketListItem)")
         
     }
     

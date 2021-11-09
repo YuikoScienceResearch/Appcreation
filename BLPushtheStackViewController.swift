@@ -21,7 +21,7 @@ class BLPushtheStackViewController: UIViewController, UITableViewDelegate, UITab
     private let selectedItem: String
     private let relatedItems: [String]
     
-    var groupName: String?
+    var Name: String?
     var individualName: String?
     var bucketListName: String?
     
@@ -34,6 +34,7 @@ class BLPushtheStackViewController: UIViewController, UITableViewDelegate, UITab
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
+
     
     // MARK: - UI Properties
     
@@ -51,7 +52,7 @@ class BLPushtheStackViewController: UIViewController, UITableViewDelegate, UITab
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .systemBackground
-        title = selectedItem
+        title = "Wish List Item"
         
         let label = UILabel(frame: view.bounds)
         view.addSubview(label)
@@ -94,7 +95,7 @@ class BLPushtheStackViewController: UIViewController, UITableViewDelegate, UITab
     
     @objc func addAction() {
         let alert = UIAlertController(title: "Add a group", message: nil, preferredStyle: .alert)
-        alert.addAction(UIAlertAction(title: "Submit", style: .default, handler: { action in
+        alert.addAction(UIAlertAction(title: "Save", style: .default, handler: { action in
             let string = alert.textFields![0].text! as String
             if string.count == 0 {
                 return
@@ -128,7 +129,7 @@ class BLPushtheStackViewController: UIViewController, UITableViewDelegate, UITab
         
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         let vc: UploadViewController = storyboard.instantiateViewController(withIdentifier: "uploadViewControllerID") as! UploadViewController
-        vc.groupName = groupName
+        vc.Name = Name
         vc.individualName = individualName
         vc.bucketListName = bucketListName
         vc.bucketListItem = itemName

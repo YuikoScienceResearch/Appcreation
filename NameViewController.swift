@@ -8,6 +8,7 @@
 import UIKit
 
 class NameViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+
     
     // MARK: - Data Properties
     
@@ -15,6 +16,11 @@ class NameViewController: UIViewController, UITableViewDelegate, UITableViewData
         let title: String
         let items: [String]
     }
+    
+    var Name: String?
+    var individualName: String?
+    var bucketListName: String?
+    var bucketListItem: String?
     
     var groupsArray: Array<String> = []
     
@@ -41,7 +47,7 @@ class NameViewController: UIViewController, UITableViewDelegate, UITableViewData
         generateTableView()
         
         groupsArray = ["Family", "Friends"]
-
+        
         }
     
     // MARK: - UI Generation
@@ -51,6 +57,7 @@ class NameViewController: UIViewController, UITableViewDelegate, UITableViewData
         
         let addButton: UIBarButtonItem = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(addAction))
         navigationItem.setRightBarButton(addButton, animated: false)
+
         
     }
     
@@ -71,24 +78,19 @@ class NameViewController: UIViewController, UITableViewDelegate, UITableViewData
     
     @objc func addAction() {
         let alert = UIAlertController(title: "Add a group", message: nil, preferredStyle: .alert)
-        alert.addAction(UIAlertAction(title: "Submit", style: .default, handler: { action in
+        alert.addAction(UIAlertAction(title: "Save", style: .default, handler: { action in
             let string = alert.textFields![0].text! as String
             if string.count == 0 {
                 return
             }
             self.groupsArray.append(string)
-            UserDefaults.standard.set(self.groupsArray, forKey: "groupNames")
+            UserDefaults.standard.set(self.groupsArray, forKey: "Names")
             self.tableView.reloadData()
         }))
         alert.addTextField(configurationHandler: nil)
         present(alert, animated: true, completion: nil)
     }
-    
-    @objc func shareAction() {
-        let items = [URL(string: "https://www.bif.com")!]
-        let ac = UIActivityViewController(activityItems: items, applicationActivities: nil)
-        present(ac, animated: true)
-    }
+
 
     // MARK: - UITableView Datasource & Delegate
    
@@ -109,7 +111,7 @@ class NameViewController: UIViewController, UITableViewDelegate, UITableViewData
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
         let _ = groupsArray[indexPath.row]
-        let vc = BucketListViewController()
+        let vc = IndividualNameViewController()
         navigationController?.pushViewController (vc, animated: true)
     }
     

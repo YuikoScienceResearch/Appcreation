@@ -1,50 +1,88 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19162" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="hHB-YO-hKY">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="LPG-zm-7Dd">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19144"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--Navigation Controller-->
-        <scene sceneID="EfJ-ZF-X3l">
+        <scene sceneID="ZRL-d7-BXe">
             <objects>
-                <navigationController id="hHB-YO-hKY" sceneMemberID="viewController">
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="oa7-51-Ooq">
+                <navigationController id="LPG-zm-7Dd" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="hgr-Ex-v5A">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
-                        <segue destination="dJJ-Au-FIK" kind="relationship" relationship="rootViewController" id="P0p-xb-Xk9"/>
+                        <segue destination="G5t-VI-9V3" kind="relationship" relationship="rootViewController" id="87I-9S-nbN"/>
                     </connections>
                 </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="4Je-B9-CQd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="GNw-Uj-ecI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1489" y="-8"/>
+            <point key="canvasLocation" x="-2657" y="1665"/>
         </scene>
         <!--Name View Controller-->
-        <scene sceneID="79b-Ju-u0x">
+        <scene sceneID="JT8-Bf-QKP">
             <objects>
-                <viewController useStoryboardIdentifierAsRestorationIdentifier="YES" id="dJJ-Au-FIK" customClass="NameViewController" customModule="ScienceResearchApp" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="VJJ-Cz-z1K">
+                <viewController id="G5t-VI-9V3" customClass="NameViewController" customModule="ScienceResearchApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="TZm-Tz-Jm8">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <viewLayoutGuide key="safeArea" id="QNT-Yp-tJj"/>
+                        <viewLayoutGuide key="safeArea" id="4dh-n2-r8a"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <navigationItem key="navigationItem" id="Vaa-ai-dV2"/>
+                    <navigationItem key="navigationItem" id="YTg-mO-Eey"/>
                     <connections>
-                        <segue destination="5N1-Ce-sbM" kind="show" id="ky9-jQ-cgk"/>
+                        <segue destination="Xly-nw-OjE" kind="show" id="nVS-2o-cuM"/>
                     </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="xMU-Zj-DiX" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ZGr-OG-65S" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-33" y="-8"/>
+            <point key="canvasLocation" x="-1787" y="1665"/>
         </scene>
-        <!--Upload View Controller-->
+        <!--Individual Name View Controller-->
+        <scene sceneID="Cld-HO-oSL">
+            <objects>
+                <viewController id="Xly-nw-OjE" customClass="IndividualNameViewController" customModule="ScienceResearchApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="xWM-FF-VKM">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="U5a-0j-TBN"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="Qwn-HC-Euz"/>
+                    <connections>
+                        <segue destination="5N1-Ce-sbM" kind="show" id="k6j-eu-sqs"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="kxM-lF-c0y" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-871" y="1665"/>
+        </scene>
+        <!--Pushthe Stack View Controller-->
+        <scene sceneID="ech-24-tvj">
+            <objects>
+                <viewController id="379-Q9-Y2G" customClass="BLPushtheStackViewController" customModule="ScienceResearchApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Ve7-Dm-V95">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="g47-6M-oNv"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="cX3-Bz-1S1"/>
+                    <connections>
+                        <segue destination="c5j-Fe-5V4" kind="show" id="Zx7-35-Kfw"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="c5F-qm-ipD" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1072" y="1665"/>
+        </scene>
+        <!--Item-->
         <scene sceneID="oZN-Dd-ckr">
             <objects>
                 <viewController storyboardIdentifier="uploadViewControllerID" useStoryboardIdentifierAsRestorationIdentifier="YES" id="c5j-Fe-5V4" customClass="UploadViewController" customModule="ScienceResearchApp" sceneMemberID="viewController">
@@ -52,17 +90,13 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dDx-R8-6W6">
-                                <rect key="frame" x="28" y="213" width="359" height="470"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="J9h-nE-Zg1">
-                                <rect key="frame" x="301" y="752" width="75" height="48"/>
+                                <rect key="frame" x="301" y="787" width="75" height="48"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Save"/>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="If3-UL-600">
-                                <rect key="frame" x="41" y="752" width="49" height="51"/>
+                                <rect key="frame" x="41" y="786" width="49" height="51"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <accessibility key="accessibilityConfiguration" identifier="uploadViewControllerID"/>
                                 <state key="normal" title="Upload"/>
@@ -71,26 +105,36 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rhe-ya-9Kl">
-                                <rect key="frame" x="289" y="115" width="99" height="51"/>
+                                <rect key="frame" x="295" y="88" width="99" height="51"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Choose Image"/>
                                 <connections>
                                     <action selector="choosingimage:" destination="c5j-Fe-5V4" eventType="touchDown" id="pFS-tA-qUf"/>
                                 </connections>
                             </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dDx-R8-6W6">
+                                <rect key="frame" x="29" y="264" width="359" height="502"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oV8-k1-EwA">
+                                <rect key="frame" x="295" y="220" width="99" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Set Text"/>
+                            </button>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="x5f-hM-GUB">
+                                <rect key="frame" x="29" y="170" width="365" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="9fa-B5-G1W"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
+                    <tabBarItem key="tabBarItem" title="Item" id="zd7-nf-pHW"/>
                     <navigationItem key="navigationItem" id="Emd-eE-TgP">
-                        <rightBarButtonItems>
-                            <barButtonItem id="g4u-J5-ueg"/>
-                            <barButtonItem systemItem="action" id="tcO-g1-MDC">
-                                <connections>
-                                    <action selector="shareImage:" destination="c5j-Fe-5V4" id="9Cg-sq-lcL"/>
-                                </connections>
-                            </barButtonItem>
-                        </rightBarButtonItems>
+                        <barButtonItem key="rightBarButtonItem" id="g4u-J5-ueg"/>
                     </navigationItem>
                     <connections>
                         <outlet property="imageView" destination="dDx-R8-6W6" id="R7f-NE-48E"/>
@@ -98,7 +142,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Pyx-Cj-uED" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3077" y="-8"/>
+            <point key="canvasLocation" x="1955" y="1665"/>
         </scene>
         <!--Bucket List View Controller-->
         <scene sceneID="baN-pl-DoT">
@@ -112,31 +156,12 @@
                     </view>
                     <navigationItem key="navigationItem" id="pnV-c6-H2u"/>
                     <connections>
-                        <segue destination="cTd-BM-lgn" kind="show" id="DJu-Di-4KN"/>
+                        <segue destination="379-Q9-Y2G" kind="show" id="FxX-9M-vzF"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qu1-TG-HOH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="796" y="-8"/>
-        </scene>
-        <!--Pushthe Stack View Controller-->
-        <scene sceneID="PTm-LU-QEz">
-            <objects>
-                <viewController useStoryboardIdentifierAsRestorationIdentifier="YES" id="cTd-BM-lgn" customClass="BLPushtheStackViewController" customModule="ScienceResearchApp" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="PkF-ip-yOL">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <viewLayoutGuide key="safeArea" id="fkH-by-kEt"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                    </view>
-                    <navigationItem key="navigationItem" id="ahe-Cj-7ht"/>
-                    <connections>
-                        <segue destination="c5j-Fe-5V4" kind="show" id="3LK-Xd-JL5"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="YSH-tk-ifO" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1736" y="-8"/>
+            <point key="canvasLocation" x="190" y="1665"/>
         </scene>
     </scenes>
     <resources>
